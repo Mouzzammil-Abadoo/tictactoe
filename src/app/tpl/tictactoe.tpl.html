@@ -1,0 +1,41 @@
+<div layout="column" layout-align="center center">
+    <div class="title">Tic-Tac-Toe</div>
+    <div class="note">Input players name to play</div>
+    <form name="vm.playersForm">
+        <div>
+            <img src="assets/images/tictactoe/player.png">
+            <md-input-container>
+                <label>Player One ({{vm.score[vm.player_one]}})</label>
+                <input type="text" name="player_one" ng-model="vm.player_one" ng-change="vm.change()">
+            </md-input-container>
+            <img class="limit-img-size" src="assets/images/tictactoe/X.png">
+        </div>
+        <div>
+            <img src="assets/images/tictactoe/playertwo.png">
+            <md-input-container>
+                <label>Player Two ({{vm.score[vm.player_two]}})</label>
+                <input type="text" name="player_one" ng-model="vm.player_two" ng-change="vm.change()">
+            </md-input-container>
+            <img class="limit-img-size" src="assets/images/tictactoe/O.png">
+        </div>
+    </form>
+    <table ng-class="{'disable-table':(!vm.player_one || !vm.player_two || vm.player_one == vm.player_two )}">
+        <tr ng-repeat="(x, row) in vm.items track by $index">
+            <td class="cell pointer" ng-repeat="(y, column) in vm.items track by $index" ng-click="vm.play(x, y)">
+                <img src="assets/images/tictactoe/{{vm.data[x+''+y]}}.png">
+            </td>
+        </tr>
+    </table>
+    <div ng-if="vm.player_one && vm.player_two">
+        <div class="turn" layout layout-padding layout-align="center center" ng-if="vm.currentlyPlayed == vm.player_one">
+            <img src="assets/images/tictactoe/playertwo.png">
+            <span>{{vm.player_two}} turn to play</span>
+            <img src="assets/images/tictactoe/playertwo.png">
+        </div>
+        <div class="turn" layout layout-padding layout-align="center center" ng-if="vm.currentlyPlayed !== vm.player_one">
+            <img src="assets/images/tictactoe/player.png">
+            <span>{{vm.player_one}} turn to play</span>
+            <img src="assets/images/tictactoe/player.png">
+        </div>
+    </div>
+</div>
