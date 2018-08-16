@@ -40,3 +40,18 @@
     font-weight: bold;
     color: grey;
 }
+
+.auth-btn {
+    margin: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.auth-btn:hover {
+    text-decoration: underline;
+}
+
+.status-text {
+    font-size: 10px;
+    margin-right: 5px;
+}
