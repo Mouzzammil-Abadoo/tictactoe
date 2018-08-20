@@ -55,3 +55,8 @@
     font-size: 10px;
     margin-right: 5px;
 }
+
+.error-msg {
+    font-size: 13px;
+    color: red;
+}

@@ -1,1 +1,32 @@
-register
+<div layout="column" layout-align="center center">
+    <div class="title">Registration</div>
+    <form name="registerForm" ng-submit="registerForm.$valid && (vm.user.password == vm.user.confirmPassword) && vm.register()" novalidate>
+        <md-input-container class="md-block">
+            <label>Username</label>
+            <input type="text" name="username" ng-model="vm.user.username" required>
+            <div ng-messages="registerForm.username.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Password</label>
+            <input type="password" name="password" ng-model="vm.user.password" required>
+            <div ng-messages="registerForm.password.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Confirm password</label>
+            <input type="password" name="confirmPassword" ng-model="vm.user.confirmPassword" required>
+            <div ng-messages="registerForm.username.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        <div layout="row" layout-padding layout-align="center center">
+            <span class="error-msg" ng-if="(vm.user.password !== vm.user.confirmPassword) && registerForm.$submitted">Password does not match!</span>
+        </div>
+        <div layout="row" layout-padding layout-align="center center">
+            <md-button class="md-raised md-primary" type="submit" ng-disabled="registerForm.$invalid && (vm.user.password !== vm.user.confirmPassword)">Sign up</md-button>
+        </div>
+    </form>
+</div>

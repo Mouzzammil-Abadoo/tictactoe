@@ -1,1 +1,23 @@
-login
+<div layout="column" layout-align="center center">
+    <div class="title">Login</div>
+    <form name="loginForm" ng-submit="loginForm.$valid && vm.login()" novalidate>
+        <md-input-container class="md-block">
+            <label>Username</label>
+            <input type="text" name="username" ng-model="vm.user.username" required>
+            <div ng-messages="loginForm.username.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Password</label>
+            <input type="password" name="password" ng-model="vm.user.password" required>
+            <div ng-messages="loginForm.password.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+
+        <div layout="row" layout-padding layout-align="center center">
+            <md-button class="md-raised md-primary" type="submit" ng-disabled="loginForm.$invalid">Sign in</md-button>
+        </div>
+    </form>
+</div>
