@@ -4,13 +4,21 @@
         .controller('RegisterController', RegisterController);
 
     /* @ngInject */
-    function RegisterController() {
+    function RegisterController(authService, $state) {
         var vm = this;
 
         vm.register = register;
 
         function register() {
-            console.log(vm.user);
+            authService
+                .register(vm.user)
+                .then(function(res) {
+                    localStorage.token = res.data.token;
+                    $state.go('network');
+                })
+                .catch(function(error) {
+                    vm.displayError = error.data;
+                });
         }
 
     }

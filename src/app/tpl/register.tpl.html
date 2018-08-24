@@ -26,7 +26,13 @@
             <span class="error-msg" ng-if="(vm.user.password !== vm.user.confirmPassword) && registerForm.$submitted">Password does not match!</span>
         </div>
         <div layout="row" layout-padding layout-align="center center">
+            <span class="error-msg">{{vm.displayError}}</span>
+        </div>
+        <div layout="row" layout-padding layout-align="center center">
             <md-button class="md-raised md-primary" type="submit" ng-disabled="registerForm.$invalid && (vm.user.password !== vm.user.confirmPassword)">Sign up</md-button>
         </div>
     </form>
+    <div layout="row" layout-padding layout-align="center center">
+        <span style="font-size:10px;">Please note that username and password are <b>case sensitive</b>.</span>
+    </div>
 </div>

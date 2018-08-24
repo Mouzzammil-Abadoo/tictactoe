@@ -25,6 +25,12 @@
                 templateUrl: 'tpl/login.tpl.html',
                 controller: 'LoginController',
                 controllerAs: 'vm'
+            })
+            .state('network', {
+                url: '/network',
+                templateUrl: 'tpl/network.tpl.html',
+                controller: 'NetworkController',
+                controllerAs: 'vm'
             });
 
     }

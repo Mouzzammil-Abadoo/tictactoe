@@ -17,7 +17,14 @@
         </md-input-container>
 
         <div layout="row" layout-padding layout-align="center center">
+            <span class="error-msg">{{vm.displayError}}</span>
+        </div>
+
+        <div layout="row" layout-padding layout-align="center center">
             <md-button class="md-raised md-primary" type="submit" ng-disabled="loginForm.$invalid">Sign in</md-button>
         </div>
     </form>
+    <div layout="row" layout-padding layout-align="center center">
+        <span style="font-size:10px;">Please note that username and password are <b>case sensitive</b>.</span>
+    </div>
 </div>
