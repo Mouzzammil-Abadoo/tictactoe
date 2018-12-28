@@ -4,8 +4,11 @@
         .controller('NetworkController', NetworkController);
 
     /* @ngInject */
-    function NetworkController() {
+    function NetworkController(localStorageService, SocketService) {
         var vm = this;
+
+        SocketService.emit('connected', 'test');
+
 
     }
 })();
