@@ -20,6 +20,7 @@
     "gulp-replace": "^0.5.4",
     "gulp-ruby-sass": "2.1.1",
     "gulp-uglify": "2.0.0",
+    "gulp-uglify-es": "^1.0.4",
     "http-proxy-middleware": "^0.17.4",
     "jwthelper": "0.0.4",
     "run-sequence": "^2.2.1"
