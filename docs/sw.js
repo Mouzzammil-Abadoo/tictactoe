@@ -2,9 +2,12 @@ var cacheName = 'tictactoe-pwa';
 var filesToCache = [
     '/',
     '/index.html',
-    '/assets/css/*.css',
+    '/assets/css/vendor.css',
+    '/assets/css/style.css',
     '/assets/images/tictactoe/*.png',
-    '/js/*.js'
+    '/js/vendor.js',
+    '/js/all.js',
+    '/js/templates.js'
 ];
 
 /* Start the service worker and cache all of the app's content */
