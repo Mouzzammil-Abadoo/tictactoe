@@ -4,7 +4,6 @@ var filesToCache = [
     '/tictactoe/index.html',
     '/tictactoe/assets/css/vendor.css',
     '/tictactoe/assets/css/style.css',
-    '/tictactoe/assets/images/tictactoe/*.png',
     '/tictactoe/js/vendor.js',
     '/tictactoe/js/all.js',
     '/tictactoe/js/templates.js'
