@@ -35,12 +35,14 @@
         </tr>
     </table>
     <div ng-if="vm.player_one && vm.player_two">
-        <div class="turn" layout layout-padding layout-align="center center" ng-if="vm.currentlyPlayed == vm.player_one">
+        <div class="turn" layout layout-padding layout-align="center center"
+            ng-if="vm.currentlyPlayed == vm.player_one">
             <img src="assets/images/tictactoe/playertwo.png">
             <span>{{vm.player_two}} turn to play</span>
             <img src="assets/images/tictactoe/playertwo.png">
         </div>
-        <div class="turn" layout layout-padding layout-align="center center" ng-if="vm.currentlyPlayed !== vm.player_one">
+        <div class="turn" layout layout-padding layout-align="center center"
+            ng-if="vm.currentlyPlayed !== vm.player_one">
             <img src="assets/images/tictactoe/player.png">
             <span>{{vm.player_one}} turn to play</span>
             <img src="assets/images/tictactoe/player.png">
